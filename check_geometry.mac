@@ -1,0 +1,15 @@
+# File: check_geometry.mac
+# Brief: Macro showing how to check the geometry for overlaps
+#
+# Date: 2014-07-28
+# Contact: P G Jones, <p.g.jones@qmul.ac.uk>
+# Revisions:
+#
+# This macro demostrates how to check a geometry for overlaps.
+# Note this takes quite some time to complete...
+
+/rat/detector/check_overlaps true
+
+/run/initialize
+
+exit

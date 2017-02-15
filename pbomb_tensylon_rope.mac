@@ -1,0 +1,44 @@
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+/rat/db/set DETECTOR geo_file "geo/ropegeo.geo"
+# /rat/db/set DETECTOR pmt_info_file "geo/pmtinfo.ratdb"
+/rat/db/set DAQ dqxx_info 0
+/rat/db/set DAQ use_qhs_hhp 0
+
+/run/initialize
+
+# Viewer (remove for speed)
+# /vis/open HepRepFile
+# /vis/heprep/setFileName example_vis
+# /vis/drawVolume
+# /vis/scene/add/trajectories
+# /vis/scene/add/hits
+# /vis/viewer/flush
+
+
+/rat/tracking/store full
+
+# BEGIN EVENT LOOP
+/rat/proc simpledaq
+/rat/proc count
+/rat/procset update 100
+/rat/proc calibratePMT
+/rat/proclast outroot
+# END EVENT LOOP.
+
+# Shooting photons from the surface of a box
+/generator/add combo gun:paint:uniform
+# /generator/vtx/set opticalphoton -1 0 0 2.48e-6
+/generator/vtx/set opticalphoton -1 0 0 3.2627e-6
+
+/generator/pos/set planewave 0.
+
+/rat/procset file "therope380.root"
+
+/generator/rate/set 1
+
+/rat/run/start 100000 #Using 10000 for other geos
+exit
+
+### rat_Linux $ratscripts/pbomb.mac -s1213144131

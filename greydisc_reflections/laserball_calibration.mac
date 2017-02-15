@@ -1,0 +1,55 @@
+
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+
+#/rat/db/set DETECTOR geo_file "geo/sno_d2o.geo"
+/rat/db/set DETECTOR geo_file "geo/lsno_d2o_greydisc.geo"
+
+
+# Storing tracks
+# /rat/tracking/store full
+# /rat/tracking/store condensed
+
+
+# /rat/db/set LASERBALL intensity 100000
+# /rat/db/set LASERBALL time_mode "MONO"
+# /rat/db/set LASERBALL angle_mode "FLAT"
+/rat/db/set LASERBALL wl_mode "DYENAME"
+/rat/db/set LASERBALL dye_name "COUMARIN-500"
+/rat/db/set LASERBALL position_x 0.23
+/rat/db/set LASERBALL position_y 0.82
+/rat/db/set LASERBALL position_z 0.15
+
+# /rat/db/set MC thin_factor 3.5
+
+
+# This is my number for collection efficiency
+/rat/db/set GREY_DISC_PARAMETERS[DiscOptics0_0] collection_efficiency 1.27
+# /rat/db/set NOISE_MC noise_flag 0
+
+/run/initialize
+
+
+
+# BEGIN EVENT LOOP
+
+# Simple DAQ option
+# /rat/proc simpledaq
+## Going for the full DAQ
+/rat/proc frontend
+/rat/proc trigger
+/rat/proc eventbuilder
+
+/rat/proc calibratePMT
+
+/rat/proc count
+/rat/procset update 100
+/rat/proclast outroot
+/rat/procset file "laserball_oca_water.root"
+# END EVENT LOOP
+
+/generator/add combo vertexlaserball:poslaserball:uniform
+
+/rat/run/start 1000 #1000 # Using 5000 for all other geos
+exit

@@ -1,0 +1,34 @@
+# Omit irrelavent processes to speed up the simulation
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+#Set the detector geometry and noise rate database entries used in the simulation
+# /rat/db/set DETECTOR geo_file "geo/snoplusnative.geo"
+/rat/db/set DETECTOR geo_file "geo/snoplus.geo"
+
+# Chose average PMT noise rate to be 450.Hz
+# /rat/db/set NOISE_RUN_LEVEL average_noiserate 450.0d
+
+#Begin Event loop and the processors to be run on each event
+/run/initialize
+# /rat/proc frontend
+/rat/proc trigger
+/rat/proc eventbuilder
+/rat/proc calibratePMT
+/rat/proc count
+/rat/procset update 5
+/rat/proc outroot
+/rat/procset file "5MeV_electrons.root"
+
+#Now specify the events to generate and pass to the event loop
+/generator/add combo gun:fill:poisson
+/generator/vtx/set e- 0 0 0 5
+/generator/pos/set 0.0 0.0 0.0
+/generator/rate/set 1
+
+# start the simulation with 100 events
+/rat/run/start 100
+
+
+
+exit

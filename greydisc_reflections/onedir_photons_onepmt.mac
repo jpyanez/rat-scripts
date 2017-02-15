@@ -1,0 +1,45 @@
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+/rat/db/set DETECTOR geo_file "geo/pmtgeo_gdisc.geo"
+#/rat/db/set DETECTOR geo_file "geo/pmtgeo.geo"
+
+/rat/db/set DETECTOR pmt_info_file "geo/pmtinfo.ratdb"
+/rat/db/set DAQ dqxx_info 0
+/rat/db/set DAQ use_qhs_hhp 0
+
+/run/initialize
+
+# Viewer (remove for speed)
+/vis/open HepRepFile
+/vis/heprep/setFileName example_vis
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/add/hits
+/vis/viewer/flush
+
+
+/rat/tracking/store full
+
+# BEGIN EVENT LOOP
+/rat/proc simpledaq
+/rat/proc count
+/rat/procset update 1000
+/rat/proc calibratePMT
+/rat/proclast outroot
+# END EVENT LOOP.
+
+# Shooting photons from the surface of a box
+/generator/add combo gun:point:uniform
+/generator/vtx/set opticalphoton 0. 0. -1. 2.48e-6
+/generator/pos/set 0 0 130.4
+
+/rat/procset file "onedir.root"
+
+/generator/rate/set 1
+
+# /rat/run/start 1000000 #Using 10000 for other geos
+/rat/run/start 10 #Using 10000 for other geos
+
+exit
+

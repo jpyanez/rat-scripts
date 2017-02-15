@@ -1,0 +1,56 @@
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+
+# /rat/db/set DETECTOR geo_file "geo/lsnoplusnative.geo"
+# /rat/db/set DETECTOR geo_file "geo/lsnoplusnative.geo"
+
+# /rat/db/set DETECTOR geo_file "geo/lsnoplus.geo"
+/rat/db/set DETECTOR geo_file "geo/lsnoplus_viewer.geo"
+# /rat/db/set DETECTOR geo_file "geo/lsnoplusnative_viewer.geo"
+
+
+# /rat/db/set DETECTOR geo_file "geo/pmtgeo.geo"
+# /rat/db/set DETECTOR pmt_info_file "geo/pmtinfo.ratdb"
+# /rat/db/set DAQ dqxx_info 0
+# /rat/db/set DAQ use_qhs_hhp 0
+
+/run/initialize
+
+#### One way of viewing the geometry
+# /vis/open RayTracer
+# /vis/scene/create
+# /vis/scene/add/volume
+# /vis/sceneHandler/attach
+# /vis/viewer/set/upVector 0.0 0.0 1.0
+# /vis/viewer/set/viewpointThetaPhi -90 90
+# /vis/viewer/set/lightsThetaPhi 90 0
+# /vis/viewer/set/style s
+# #/vis/viewer/set/sectionPlane on 0 0 0.1 m 1 0.3 0.7
+# /vis/viewer/flush
+/rat/tracking/store condensed
+
+## Another way of viewing the geometry
+## Trying to get high resolution
+/vis/open RayTracer
+/vis/viewer/set/viewpointThetaPhi 02 50 # Top view
+# /vis/viewer/set/viewpointThetaPhi 90 50 # Side view
+#/vis/viewer/set/viewpointThetaPhi 30 160 # weird topish view
+# /vis/viewer/set/viewpointThetaPhi 160 20
+
+/vis/viewer/set/lightsThetaPhi 70 20
+#/vis/viewer/dollyTo 5
+/vis/viewer/zoom 14. #11.
+/vis/drawVolume
+/vis/scene/add/axes 0 0 0 5000 mm
+#/vis/rayTracer/column 1000
+#/vis/rayTracer/row 1000
+/vis/viewer/flush
+
+## Because RayTracer in essence takes over Geant4's tracking routines for
+## its own use, RayTracer cannot be used to visualize Trajectories or hits.
+
+
+
+/rat/run/start
+exit

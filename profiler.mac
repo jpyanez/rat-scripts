@@ -1,0 +1,52 @@
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+# Use the simple geo for speed up viewing
+/rat/db/set DETECTOR geo_file "geo/snoplus.geo"
+# /rat/db/set DETECTOR geo_file "geo/snoplus_greydisc.geo"
+# /rat/db/set DETECTOR geo_file "geo/snoplusnative.geo"
+# /rat/db/set DETECTOR geo_file "geo/snoplusnative_greydisc.geo"
+# /rat/db/set DETECTOR geo_file "geo/snoplusnative_jpmod_greydisc.geo"
+
+
+# /rat/db/set DETECTOR geo_file "geo/snoplus_jpmod.geo"
+# /rat/db/set DETECTOR geo_file "geo/snoplusnative_jpmod.geo"
+# /rat/db/set DETECTOR geo_file "geo/snoplusnative_jpmod2.geo"
+
+## Using the Grey Disc
+# /rat/db/set GEO[innerPMT] grey_disc 1
+# /rat/db/set GEO[innerPMT] add_concentrator 1
+# /rat/db/set GEO[innerPMT] use_envelope 1
+# /rat/db/set GREY_DISC_PARAMETERS[DiscOptics0_0] collection_efficiency 1.27
+
+# Photon thinning
+/rat/db/set MC thin_factor 3.5
+
+# Storing tracks
+# /rat/tracking/store full
+
+/run/initialize
+
+
+
+
+# BEGIN EVENT LOOP
+/rat/proc simpledaq
+/rat/proc count
+/rat/procset update 5
+/rat/proc calibratePMT
+/rat/proclast outroot
+/rat/procset file "profiler.root"
+# END EVENT LOOP
+
+/generator/add combo gun:fill:uniform
+/generator/vtx/set e- 0 0 0 5
+/generator/pos/set 0 0 0
+/generator/rate/set 1
+
+# /run/verbose 2
+# /event/verbose 2
+# /tracking/verbose 2
+
+/rat/run/start 100
+exit

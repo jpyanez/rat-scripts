@@ -1,0 +1,69 @@
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+# Use the simple geo for speed up viewing
+/rat/db/set DETECTOR geo_file "geo/snoplus.geo"
+# /rat/db/set DETECTOR geo_file "geo/snoplusnative.geo"
+
+
+
+
+# Storing tracks
+/rat/tracking/store condensed
+# /rat/tracking/store condensed
+
+/run/initialize
+
+## The following sequence of commands worked in my old build
+## Tested with snoplus.geo
+# /vis/open RayTracer
+# /vis/scene/create
+# /vis/scene/add/volume
+# /vis/sceneHandler/attach
+# /vis/viewer/set/upVector 0.0 0.0 1.0
+# /vis/viewer/set/viewpointThetaPhi -90 90
+# /vis/viewer/set/lightsThetaPhi -90 90
+# /vis/viewer/set/style s
+# /vis/scene/add/trajectories
+# /vis/scene/add/hits
+# /vis/viewer/flush
+
+## This tilt works for both geometries. I'll keep it
+
+## Code for seeing the detector only (RayTracer)
+## Trying to get high resolution
+/vis/open RayTracer
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 90 0
+/vis/rayTracer/column 1800
+/vis/rayTracer/row 1800
+/vis/viewer/refresh
+## Because RayTracer in essence takes over Geant4's tracking routines for
+## its own use, RayTracer cannot be used to visualize Trajectories or hits.
+
+#
+
+# /vis/open RayTracer
+# /vis/drawVolume
+# /vis/viewer/set/viewpointThetaPhi 90 0
+# /vis/scene/add/trajectories
+# /vis/viewer/refresh
+
+# BEGIN EVENT LOOP
+/rat/proc simpledaq
+/rat/proc count
+/rat/procset update 5
+/rat/proc calibratePMT
+/rat/proclast outroot
+/rat/procset file "photon_bomb.root"
+# END EVENT LOOP
+
+/generator/add combo pbomb:point:uniform
+/generator/vtx/set 10000 400 0
+
+/generator/pos/set 0 0 0 mm
+/generator/rate/set 1
+
+
+/rat/run/start 1
+exit

@@ -1,0 +1,32 @@
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+
+/rat/db/set DETECTOR geo_file "geo/snoplusnative.geo"
+
+
+/run/initialize
+
+# BEGIN EVENT LOOP
+/rat/proc simpledaq
+/rat/proc count
+/rat/procset update 1
+/rat/proc calibratePMT
+/rat/proclast outroot
+/rat/procset file "issue.root"
+# END EVENT LOOP
+
+/generator/add combo gun:point
+/generator/vtx/set opticalphoton -4930 3360 449 2.48e-6 0 0 0 1000
+/generator/pos/set 0 0 0
+
+# /generator/vtx/set opticalphoton -4930 3360 499 2.48e-6 0 0 0 1000
+# /generator/pos/set 0 0 -50
+
+/generator/rate/set 1
+# /run/verbose 2
+# /event/verbose 2
+# /tracking/verbose 2
+
+/rat/run/start 1000
+exit
