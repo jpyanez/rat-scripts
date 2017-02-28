@@ -3,8 +3,7 @@
 /rat/physics_list/OmitHadronicProcesses true
 
 
-#/rat/db/set DETECTOR geo_file "geo/sno_d2o.geo"
-/rat/db/set DETECTOR geo_file "geo/lsno_d2o_greydisc.geo"
+/rat/db/set DETECTOR geo_file "local_geometries/lsno_d2o_greydisc.geo"
 
 
 # Storing tracks
@@ -46,7 +45,7 @@
 /rat/proc count
 /rat/procset update 100
 /rat/proclast outroot
-/rat/procset file "laserball_oca_water.root"
+/rat/procset file "laserball_oca_d2o.root"
 # END EVENT LOOP
 
 /generator/add combo vertexlaserball:poslaserball:uniform
