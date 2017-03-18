@@ -1,0 +1,37 @@
+How to visualize events in Geant4 & RAT
+
+HepRApp
+-------
+
+You can read about it here:
+http://geant4.slac.stanford.edu/Presentations/vis/G4HepRAppTutorial/G4HepRAppTutorial.html
+
+Quickstart:
+
+1. Add this to your script
+/vis/open HepRepFile
+/vis/heprep/setFileName file_name
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/add/hits
+/vis/viewer/flush
+
+2. Run the script. No X forwarding needed.
+
+3. You should see output with .heprep extension
+
+4. Copy those files to a system with X forwarding or local machine
+
+5. Get HepRApp to open them:
+http://www.slac.stanford.edu/~perl/HepRApp/HepRApp.jar
+
+Heprep is slow, and does not display arbitrary volumes. You can test it with a one PMT setup:
+Script:
+https://github.com/jpyanez/rat-scripts/blob/master/greydisc_reflections/onedir_photons_onepmt.mac
+You'll need these geometry files:
+https://github.com/jpyanez/rat-scripts/blob/master/rat-geometries/pmtgeo.geo
+https://github.com/jpyanez/rat-scripts/blob/master/rat-geometries/pmtinfo.ratdb
+
+And to run it:
+java -jar  path/to/HepRApp.jar
+
