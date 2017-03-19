@@ -9,7 +9,7 @@ import os, sys
 import matplotlib.pyplot as plt
 
 import numpy as np
-sys.path.append('/home/jp/projects/python_tools')
+sys.path.append(os.environ.get("PYTHONTOOLS"))
 from jp_analysis import *
 import jp_mpl as jplot
 import rat
@@ -17,12 +17,13 @@ import rat
 
 # In[3]:
 
-infile_dir = '/home/jp/projects/snoplus/rundir/greydisc_validation/onepmt_geo'
+infile_dir = sys.argv[1]
+wavelength = sys.argv[2]
 
 
 # In[4]:
 
-infile_name = 'thebox_337nm.root'
+infile_name = 'thebox_'+wavelength+'nm.root'
 
 
 # In[5]:
@@ -311,10 +312,4 @@ np.sum(data['nsteps'] < 16)
 # In[ ]:
 
 import pickle
-pickle.dump(data, open('/home/jp/projects/snoplus/rundir/greydisc_validation/onepmt_geo/condensed_337nm.pckl','w'))
-
-
-# In[ ]:
-
-
-
+pickle.dump(data, open(os.path.join(infile_dir, 'condensed_'+wavelength+'nm.pckl'),'w'))
