@@ -2,7 +2,13 @@
 /rat/physics_list/OmitHadronicProcesses true
 
 
-/rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_withpipes.geo"
+/rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_original.geo"
+
+# /rat/db/set GEO[innerPMT] enable 0
+# /rat/db/set GEO[psup] vis_invisible 1
+/rat/db/set GEO[inner_av] vis_invisible 1
+/rat/db/set GEO[av] vis_invisible 1
+# /rat/db/set GEO[neck] vis_invisible 1
 
 
 # /rat/db/set DETECTOR geo_file "geo/pmtgeo.geo"
