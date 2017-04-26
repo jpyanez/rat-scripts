@@ -1,8 +1,8 @@
 /rat/physics_list/OmitMuonicProcesses true
 /rat/physics_list/OmitHadronicProcesses true
 
-#/rat/db/set DETECTOR geo_file "local_geometries/pmtgeo_gdisc.geo"
-/rat/db/set DETECTOR geo_file "local_geometries/pmtgeo.geo"
+/rat/db/set DETECTOR geo_file "local_geometries/pmtgeo_gdisc.geo"
+#/rat/db/set DETECTOR geo_file "local_geometries/pmtgeo.geo"
 
 /rat/db/set DETECTOR pmt_info_file "local_geometries/pmtinfo.ratdb"
 /rat/db/set DAQ dqxx_info 0
@@ -40,8 +40,9 @@
 
 /generator/rate/set 1
 
-# /rat/run/start 1000000 #Using 10000 for other geos
-/rat/run/start 1000000 # 1000000  #Using 10000 for other geos
+/rat/run/start 50000
+# /rat/run/start 1000000
+#/rat/run/start 1000000 # 1000000  #Using 10000 for other geos
 
 exit
 

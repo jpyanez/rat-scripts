@@ -15,10 +15,12 @@ import jp_mpl as jplot
 import rat
 
 
+
 # In[3]:
 
 infile_dir = sys.argv[1]
 wavelength = sys.argv[2]
+greydisc_mode = int(sys.argv[3])
 
 
 # In[4]:
@@ -119,7 +121,7 @@ pos, mom, times,volumes,proc, ids = doRead(max_photons=3000000)
 # In[ ]:
 
 # Following a photon
-index = 0
+index = 3688
 print 'Position'
 print pos[index]
 print 'Momentum'
@@ -158,6 +160,7 @@ good_mom = []
 good_times = []
 all_volumes = []
 all_proc = []
+indices  = []
 gdisc_radius = 137.7
 for iPhoton in range(len(pos)):
     
@@ -178,6 +181,10 @@ for iPhoton in range(len(pos)):
     if mom[iPhoton][-1][2] < 0:
         continue
 
+    # The number of volumes needs to be more than 3
+    if len(volumes[iPhoton]) <= 3:
+        continue
+
     # Calculate the radius at emission point, only take those starting within the gdisc radius 
     r = np.sqrt(np.sum(pos[iPhoton][1][:2]**2))
     if r > gdisc_radius:
@@ -194,6 +201,7 @@ for iPhoton in range(len(pos)):
     good_times.append(times[iPhoton])
     all_volumes.append(volumes[iPhoton])
     all_proc.append(proc[iPhoton])
+    indices.append(iPhoton)
 
 
 # In[ ]:
@@ -260,10 +268,24 @@ for iPhoton in range(len(good_pos)):
                                    good_mom[iPhoton][-1][0])
     
     leaving_times = (good_mom[iPhoton][:,2] > 0)
-    leaving_pos = (good_pos[iPhoton][:,2]>130.)
-    data['delta_t'][iPhoton] = np.array(good_times[iPhoton])[(leaving_times*leaving_pos)[1:]][0]
 
-    
+    if greydisc_mode:
+        leaving_pos = np.concatenate(([False], (np.array(all_volumes[iPhoton]) == 'r1408_pmtenv0'))) + \
+            np.concatenate(([False], (np.array(all_volumes[iPhoton]) == 'r1408_concentrator'))) + \
+            np.concatenate(([False], (np.array(all_volumes[iPhoton]) == 'r1408_concentrator_petal')))
+        
+    else:
+        leaving_pos = (good_pos[iPhoton][:,2]>130.)
+
+    try:
+        data['delta_t'][iPhoton] = np.array(good_times[iPhoton])[(leaving_times*leaving_pos)[1:]][0]
+    except:
+        data['delta_t'][iPhoton] = 0.
+        print 'Error!'
+        print all_volumes[iPhoton]
+        print good_pos[iPhoton][:,2]
+        print 'Continuing ...'
+       
     if iPhoton % 10000 == 0:
         print iPhoton
         

@@ -3,29 +3,28 @@
 /rat/physics_list/OmitHadronicProcesses true
 
 
-/rat/db/set DETECTOR geo_file "local_geometries/lsno_d2o_greydisc.geo"
+#/rat/db/set DETECTOR geo_file "local_geometries/lsno_d2o_greydisc.geo"
+/rat/db/set DETECTOR geo_file "local_geometries/lsno_d2o.geo"
 
 
-# Storing tracks
-# /rat/tracking/store full
-# /rat/tracking/store condensed
-
-
-# /rat/db/set LASERBALL intensity 100000
-# /rat/db/set LASERBALL time_mode "MONO"
-# /rat/db/set LASERBALL angle_mode "FLAT"
 /rat/db/set LASERBALL wl_mode "DYENAME"
-/rat/db/set LASERBALL dye_name "COUMARIN-500"
+/rat/db/set LASERBALL dye_name "N2"
+
+# Testing three positions
 /rat/db/set LASERBALL position_x 0.23
 /rat/db/set LASERBALL position_y 0.82
 /rat/db/set LASERBALL position_z 0.15
 
-# /rat/db/set MC thin_factor 3.5
-
 
 # This is my number for collection efficiency
+
+/rat/db/set GEO[innerPMT] grey_disc [1]
+/rat/db/set GEO[innerPMT] add_bucket [1]
+/rat/db/set GEO[innerPMT] use_envelope [1]
+/rat/db/set GEO[innerPMT] disc_model ["DiscOptics0_0"]
+
 /rat/db/set GREY_DISC_PARAMETERS[DiscOptics0_0] collection_efficiency 1.27
-# /rat/db/set NOISE_MC noise_flag 0
+
 
 /run/initialize
 
@@ -33,8 +32,6 @@
 
 # BEGIN EVENT LOOP
 
-# Simple DAQ option
-# /rat/proc simpledaq
 ## Going for the full DAQ
 /rat/proc frontend
 /rat/proc trigger
@@ -50,5 +47,5 @@
 
 /generator/add combo vertexlaserball:poslaserball:uniform
 
-/rat/run/start 1000 #1000 # Using 5000 for all other geos
+/rat/run/start 100
 exit
