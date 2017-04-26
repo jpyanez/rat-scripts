@@ -1,0 +1,45 @@
+
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+
+/rat/db/set DETECTOR geo_file "local_geometries/lsno_d2o_greydisc.geo"
+
+
+/rat/db/set LASERBALL wl_mode "DYENAME"
+/rat/db/set LASERBALL dye_name "N2"
+
+# Testing three positions
+#  [ 189.     -0.97  191.56 -460.57  498.82]
+/rat/db/set LASERBALL position_x -0.97
+/rat/db/set LASERBALL position_y 191.56
+/rat/db/set LASERBALL position_z -460.57
+
+
+# This is my number for collection efficiency
+/rat/db/set GREY_DISC_PARAMETERS[DiscOptics0_0] collection_efficiency 1.27
+
+
+/run/initialize
+
+
+
+# BEGIN EVENT LOOP
+
+## Going for the full DAQ
+/rat/proc frontend
+/rat/proc trigger
+/rat/proc eventbuilder
+
+/rat/proc calibratePMT
+
+/rat/proc count
+/rat/procset update 100
+/rat/proclast outroot
+/rat/procset file "laserball_oca_d2o_edge.root"
+# END EVENT LOOP
+
+/generator/add combo vertexlaserball:poslaserball:uniform
+
+/rat/run/start 10000
+exit
