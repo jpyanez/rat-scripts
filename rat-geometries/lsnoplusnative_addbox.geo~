@@ -238,6 +238,7 @@ vis_color: [0.24, 0.8, 0.50],
 }
 
 
+
 {
 type: "GEO",
 version: 1,
@@ -254,8 +255,8 @@ solid: "box",
 mother: "inner_av",
 
 // Probably this size is a bit too big
-half_size: [150.0, 150.0, 40.], // mm
-position:  [0,0,1000.],
+half_size: [150.0, 150.0, 0.4], // mm
+position:  [0,0,12500.],
 
 material: "acrylic_sno",
 
@@ -264,39 +265,10 @@ vis_invisible: 0,
 vis_color: [1., 0., 0.],
 }
 
-
-
-// {
-// type: "GEO",
-// version: 1,
-// index: "box2",
-// run_range: [0, 0],
-// pass: 0,
-// comment: "",
-// timestamp: "",
-// enable: 1,
-
-// factory: "solid",
-// solid: "box",
-
-mother: "inner_av",
-// mother: "box",
-
-// // Probably this size is a bit too big
-// half_size: [10.0, 10.0, 10.], // mm
-// position:  [20,0,50.],
-
-// material: "acrylic_sno",
-
-// vis_invisible: 0,
-// //vis_style: "wireframe",
-// vis_color: [1., 0., 0.],
-// }
-
 {
 type: "GEO",
 version: 1,
-index: "box3",
+index: "box2",
 run_range: [0, 0],
 pass: 0,
 comment: "",
@@ -307,11 +279,10 @@ factory: "solid",
 solid: "box",
 
 mother: "inner_av",
-// mother: "box",
 
 // Probably this size is a bit too big
-half_size: [10.0, 10.0, 10.], // mm
-position:  [-20,0,50.],
+half_size: [150.0, 150.0, 0.4], // mm
+position:  [0,0,8200.],
 
 material: "acrylic_sno",
 
