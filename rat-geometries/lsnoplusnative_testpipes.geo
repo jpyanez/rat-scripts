@@ -250,6 +250,6 @@ solids: ["av_pipe-1", "av_pipe-2", "av_pipe-3", "av_pipe-4", "av_pipe-labs", "av
 material: "acrylic_sno",
 
 vis_invisible: 0,
-vis_style: "wireframe",
-vis_color: [0.0, 0.0, 0.0],
+//vis_style: "wireframe",
+vis_color: [0.0, .80, 1.0],
 }

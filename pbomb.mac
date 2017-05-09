@@ -2,21 +2,8 @@
 /rat/physics_list/OmitHadronicProcesses true
 
 # Use the simple geo for speed up viewing
-# /rat/db/set DETECTOR geo_file "geo/snoplus_simple_h2o.geo"
-# /rat/db/set DETECTOR geo_file "geo/snoplusnative_h2o.geo"
-# /rat/db/set DETECTOR geo_file "geo/snoplus_noropes.geo"
-# /rat/db/set DETECTOR geo_file "geo/snoplus_simple.geo"
-
-/rat/db/set DETECTOR geo_file "geo/lsnoplusnative.geo"
-# /rat/db/set DETECTOR geo_file "geo/lsnoplus_corrected.geo"
-
-# /rat/db/set DETECTOR geo_file "geo/snoplus_full.geo"
-# /rat/db/set DETECTOR geo_file "geo/snoplus_likenative.geo"
-# /rat/db/set DETECTOR geo_file "geo/snoplus.geo"
-
-# /rat/db/set DETECTOR geo_file "geo/snoplus_greydisc.geo"
-  # /rat/db/set DETECTOR geo_file "geo/snoplus_simple.geo"
-# /rat/db/set DETECTOR geo_file "geo/snoplusnative_greydisc.geo"
+# /rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_testpipes.geo"
+/rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_original.geo"
 
 ## Using the Grey Disc
 # /rat/db/set GEO[innerPMT] grey_disc 1
@@ -33,11 +20,10 @@
 
 
 
-
 # BEGIN EVENT LOOP
 /rat/proc simpledaq
 /rat/proc count
-/rat/procset update 10
+/rat/procset update 1
 /rat/proc calibratePMT
 /rat/proclast outroot
 # END EVENT LOOP.
@@ -55,5 +41,5 @@
 # /event/verbose 2
 # /tracking/verbose 2
 
-/rat/run/start 100 #Using 10000 for other geos
+/rat/run/start 50 #Using 10000 for other geos
 exit

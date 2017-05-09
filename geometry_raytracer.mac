@@ -1,13 +1,13 @@
 /rat/physics_list/OmitMuonicProcesses true
 /rat/physics_list/OmitHadronicProcesses true
 
-
-/rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_original.geo"
+/rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_testpipes.geo"
+#/rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_original.geo"
 #/rat/db/set DETECTOR geo_file "local_geometries/lsnoplus.geo"
 
 # /rat/db/set GEO[innerPMT] enable 0
 # /rat/db/set GEO[psup] vis_invisible 1
-# /rat/db/set GEO[inner_av] vis_invisible 1
+/rat/db/set GEO[inner_av] vis_invisible 1
 /rat/db/set GEO[av] vis_invisible 1
 # /rat/db/set GEO[neck] vis_invisible 1
 
@@ -36,14 +36,14 @@
 ## Trying to get high resolution
 /vis/open RayTracer
 /vis/viewer/set/upVector 0.0 0.0 1.0
-#/vis/viewer/set/viewpointThetaPhi 02 50 # Top view
-/vis/viewer/set/viewpointThetaPhi 90 50 # Side view
+/vis/viewer/set/viewpointThetaPhi 02 50 # Top view
+# /vis/viewer/set/viewpointThetaPhi 90 50 # Side view
 #/vis/viewer/set/viewpointThetaPhi 30 160 # weird topish view
 # /vis/viewer/set/viewpointThetaPhi 160 20
 
 /vis/viewer/set/lightsThetaPhi 70 20
 #/vis/viewer/dollyTo 5
-/vis/viewer/zoom 1.5 #11.
+/vis/viewer/zoom 2. #11.
 /vis/drawVolume
 /vis/scene/add/axes 0 0 0 5000 mm
 #/vis/rayTracer/column 1000
