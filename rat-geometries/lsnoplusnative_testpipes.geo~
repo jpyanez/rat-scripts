@@ -245,7 +245,7 @@ factory: "solidCollection",
 
 mother: "inner_av",
 
-solids: ["av_pipe-1"], //, "av_pipe-2", "av_pipe-3", "av_pipe-4", "av_pipe-labs", "av_pipe-6", "av_pipe-labr",],
+solids: ["av_pipe-1", "av_pipe-2", "av_pipe-3", "av_pipe-4", "av_pipe-labs", "av_pipe-6", "av_pipe-labr",],
 
 material: "acrylic_sno",
 
