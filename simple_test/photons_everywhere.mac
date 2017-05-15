@@ -1,0 +1,34 @@
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+# Use the simple geo for speed up viewing
+# /rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_addbox.geo"
+# /rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_testpipes.geo"
+/rat/db/set DETECTOR geo_file "geo/snoplus.geo"
+
+/run/initialize
+
+
+
+
+# BEGIN EVENT LOOP
+/rat/proc simpledaq
+/rat/proc count
+/rat/procset update 10
+/rat/proc calibratePMT
+/rat/proclast outroot
+# END EVENT LOOP.
+
+/generator/add combo gun:fill:uniform
+/generator/vtx/set opticalphoton 0 0 0 3.67e-6 # This is 337 nm
+/rat/procset file "photons_everywhere2.root"
+/generator/pos/set inner_av
+
+/generator/rate/set 1
+
+# /run/verbose 2
+# /event/verbose 2
+# /tracking/verbose 2
+
+/rat/run/start 10000 #Using 10000 for other geos
+exit
