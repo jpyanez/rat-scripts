@@ -1,0 +1,34 @@
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+# Use the simple geo for speed up viewing
+/rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_full.geo"
+/rat/db/set GEO[hqePMT] enable 0
+/rat/db/set GEO[innerPMT] enable 0
+/rat/db/set GEO[outerPMT] enable 0
+
+#/rat/db/set GEO[av_pipes] enable 0
+#/rat/db/set NATIVE_GEO_DIMENSIONS[natgeo_dimensions] add_belly_plates 0
+#/rat/db/set NATIVE_GEO_DIMENSIONS[natgeo_dimensions] add_ncd_anchors 0
+
+
+
+/run/initialize
+
+# BEGIN EVENT LOOP
+/rat/proc simpledaq
+/rat/proc count
+/rat/procset update 1
+/rat/proc calibratePMT
+/rat/proclast outroot
+# END EVENT LOOP.
+
+/generator/add combo pbomb:point:uniform
+
+/generator/vtx/set 5000 380 0
+
+/generator/pos/set 0 0 0 mm
+/generator/rate/set 1
+
+/rat/run/start 1000 
+exit

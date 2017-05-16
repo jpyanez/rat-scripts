@@ -2,12 +2,13 @@
 /rat/physics_list/OmitHadronicProcesses true
 
 # Use the simple geo for speed up viewing
-/rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_full.geo"
+/rat/db/set DETECTOR geo_file "local_geometries/lsnoplus_likenative.geo"
 
-/rat/db/set GEO[av_pipes] enable 0
-/rat/db/set NATIVE_GEO_DIMENSIONS[natgeo_dimensions] add_belly_plates 0
-/rat/db/set NATIVE_GEO_DIMENSIONS[natgeo_dimensions] add_ncd_anchors 1
-/rat/db/set NATIVE_GEO_DIMENSIONS[natgeo_dimensions] inner_av_radius 6001.
+#/rat/db/set GEO[av_pipes] enable 0
+#/rat/db/set NATIVE_GEO_DIMENSIONS[natgeo_dimensions] add_belly_plates 0
+#/rat/db/set NATIVE_GEO_DIMENSIONS[natgeo_dimensions] add_ncd_anchors 0
+
+
 
 
 
@@ -26,8 +27,8 @@
 
 /generator/vtx/set 5000 380 0
 
-/generator/pos/set -130 800 5910 mm
+/generator/pos/set 0 0 0 mm
 /generator/rate/set 1
 
-/rat/run/start 1000 
+/rat/run/start 100 # A factor 10 less events in the standard geometry
 exit
