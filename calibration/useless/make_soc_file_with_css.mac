@@ -1,0 +1,35 @@
+##/rat/db/load /home/jpyanez/snoplus/data/laserball_db_files/CAL_SOURCE_RUN_LEVEL.ratdb
+/rat/db/set DAQ dqxx_info 1
+
+#/rat/inzdab/load /home/jpyanez/snoplus/data/laserball/SNOP_0000100555_000.l2.zdab
+/rat/inzdab/load /home/jpyanez/snoplus/data/laserball/SNOP_0000100554_000.l2.zdab
+/rat/db/set RUN runtype 14
+
+/rat/db/load /home/jpyanez/snoplus/data/laserball_db_files/CAL_SOURCE_RUN_LEVEL.ratdb
+/rat/db/load CSS_CUTS_100555.ratdb
+
+/run/initialize
+/rat/proc calibratePMT
+/rat/proc chanSWStatusCalib
+
+
+/rat/proc/if trigTypeSelector
+  /rat/procset trigType "EXTASY"
+  /rat/proc socdata
+/rat/proc/endif
+
+/rat/proc socpeakfind
+/rat/proc socfitter
+/rat/procset method "socPositionTimeChiSquared"
+/rat/procset optimiser "minuit"
+/rat/procset selector "null"
+
+/rat/proc outsoc
+#/rat/procset file "/home/jpyanez/snoplus/data/laserball_soc/SNOP_0000100555_000.root"
+/rat/procset file "/home/jpyanez/snoplus/data/laserball_soc/SNOP_0000100554_000.root"
+/rat/procset file "/home/jpyanez/snoplus/data/laserball_soc/SNOP_0000100554_000_withCSS.root"
+
+
+/rat/inzdab/read
+
+exit

@@ -1,0 +1,26 @@
+# File: CSSCalcCuts.mac
+# Brief: Macro for calculating the CSS cuts based on a standard run.
+#        The histograms are saved as root files and
+#        the cut values stored in RAT DBTable.
+#
+# Date: 21-04-2016
+# Contact: Evelina Arushanova, <e.arushanova@qmul.ac.uk>
+# Revisions:
+#
+
+/rat/db/set DAQ dqxx_info 1
+
+/rat/inzdab/load /home/jpyanez/snoplus/data/laserball/SNOP_0000100555_000.l2.zdab
+/rat/db/set RUN runtype 14
+
+/rat/db/load /home/jpyanez/snoplus/data/laserball_db_files/CAL_SOURCE_RUN_LEVEL.ratdb
+
+
+/run/initialize
+
+/rat/proc calibratePMT
+/rat/proc chanSWStatusProc
+/rat/proclast outroot
+
+/rat/inzdab/read
+exit

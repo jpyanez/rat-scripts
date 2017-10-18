@@ -1,0 +1,294 @@
+[31mThis is SNO+ RAT 6.3.1-92-gd05e1f5 (d05e1f5aded2bdf5b2cfcfc9f19a31e8386492d7)[m
+Hostname detected: lg-1r14-n04
+Hardware detected: x86_64
+Status messages enabled: info detail 
+Hostname: lg-1r14-n04 PID: 15619
+[34;1mSeeding random number generator: [m1685663935
+[34;1mLoading database tables from remote RATDB...[m
+[34;1mLoading default database tables...[m
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/AFTERPULSING.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/AMELLIE.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/AV_PIPES.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/AV_TILES.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/BADC.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/BLINDNESS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/BUCKET.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/Burst.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CAL_SOURCE_RUN_LEVEL.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CHERENKOV_SOURCE_PDF.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CLASSIFIER_ALPHA_BETA_LIKELIHOOD_Te_Diol.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CLASSIFIER_ALPHA_SEEDED.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CLASSIFIER_ALPHA_UNSEEDED.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CLASSIFIER_BERKELEY_AB.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CLASSIFIER_BIPO_CUMULTIMERESID_Te_Diol.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CLASSIFIER_BIPO_LIKELIHOODDIFF_Te_Diol.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CLASSIFIER_IBD.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CLASSIFIER_ITR.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CLASSIFIER_NEAR_AV_ANGULAR_labppo.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CLASSIFIER_QPDT.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CONCENTRATOR.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CONC_OPTICAL_PARAMETERS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CONC_PROMPT_PARAMETERS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CONC_REFL_PARAMETERS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CONC_REFL_PARAMETERS_2.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CONC_REFL_PARAMETERS_3.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CSS_CUTS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/CSS_RESULT.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/DAQ.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/DAQ_RUN_LEVEL.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/DATACLEANING.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/DETECTOR.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/DQCHECKS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/DQLL.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/Decay0.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/Decay0Backg.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/DoubleBeta.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/ECA_generation.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/ECApattern.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/EFFECTIVE_VELOCITY.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/EFFECTIVE_VELOCITY_Te_Diol_bisMSB.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/EFFECTIVE_VELOCITY_labppo.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/ELEMENTS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/ELLIE.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/ESCOMBO.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/ESCrossSection.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/ET1D.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/ET1D_Te_Diol_bisMSB.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/ET1D_labppo.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_DIR.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_ENERGY_FUNCTIONAL.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_ENERGY_FUNCTIONAL_labppo.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_ENERGY_LOOKUP.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_ENERGY_LOOKUP_labppo.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_ENERGY_PROMPT_HITS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_ENERGY_PROMPT_LOOKUP.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_ENERGY_RSP.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_ENERGY_RTHETA_FUNCTIONAL.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_ENERGY_RTHETA_FUNCTIONAL_Te_Diol_bisMSB.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_NEAR_AV_ANGULAR_labppo.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_PARTIAL_ENERGY_SCALING.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_PEnergy.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_POISSION.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_POSITION_ANN.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_POSITION_ANN_Te_Diol_bisMSB.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_QUAD.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_QUAD_Te_Diol_bisMSB.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_QUAD_labppo.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FIT_SIMPLE_ENERGY.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/FLUX.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/Flasher.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/GEO_LOCATIONS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/GREY_DISC_PARAMETERS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/GREY_DISC_PARAMETERS_2.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/GREY_DISC_PARAMETERS_3.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/GV1D.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/HITCLEANING.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/IBD.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/IO.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/InputSpectrum.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/LASERBALL.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/LEDGeneric.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/MATERIALS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/MATERIALS_Te_Diol_bisMSB.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/MATERIALS_labppo.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/MC.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/NATIVE_GEO_DIMENSIONS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/NOISE.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/NOISE_RUN_INTEGRATED.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/NOISE_RUN_LEVEL.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/NTUPLE.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/NUCLEON_DECAY.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/OPTICS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/OPTICS_Te_Diol_bisMSB.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/OPTICS_labppo.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/OSCILLATIONS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PANELINFO.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PCAGF_20652.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PCATW_26173.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PCA_GENERATION.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PDST_100001_0.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PMT.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PMTBASE.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PMTCalibration.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PMTTRANSIT.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PMT_DQXX.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PMT_OPTICAL_PARAMETERS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PMT_VARIATION.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/PingCrates.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/RADIAL_PDFS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/REACTORS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/REACTORS_STATUS.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/RUN.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/SELECTOR_ISOTROPY.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/SINGLEPMTINFO.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/SMELLIE.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/SOLID.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/SURFACES.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/SolarSpectra.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/TELLIE.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/TSLP_100001_0.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/UFO.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/WAVEGUIDE.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/nSPECTRUM.ratdb ... Success!
+DB::LoadAll: Loading /home/jpyanez/snoplus/software/rat-jp/data/pes_spectrum.ratdb ... Success!
+DB::LoadAll: Loaded 126 tables
+[34;1mInitializing Processor block...[m
+[34;1mInitializing run manager...[m
+
+*************************************************************
+ Geant4 version Name: geant4-10-00-patch-02    (13-June-2014)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+Appending RAT extra units to the units table...
+Initializing Gsim...
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Initializing the visualization manager
+[34;1mInitializing event producers...[m
+[34;1mInitializing user interface...[m
+[34;1mRunning macro...[m
+DB: Setting DAQ[] dqxx_info to 1
+
+DB: Setting RUN[] runtype to 14
+
+DB::Load: Loading /home/jpyanez/snoplus/data/laserball_db_files/CAL_SOURCE_RUN_LEVEL.ratdb
+DB::LoadFile: Replacing default CALIB_COMMON_RUN_LEVEL[CAMERA] in database.
+
+Detector::Construct: Constructing detector materials.
+Detector::Construct: Loading detector geometry from geo/snoplus.geo
+Detector::Construct: Loading pmt info from pmt/PMTINFO_mar2017.ratdb
+Detector::Construct: Constructing geometry.
+NeutronHP: /Elastic file for Z = 6, A = 12 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 13 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 10, A = 20 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/11_22_Sodium
+NeutronHP: /Elastic file for Z = 10, A = 21 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/11_22_Sodium
+NeutronHP: /Elastic file for Z = 10, A = 22 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/11_22_Sodium
+NeutronHP: /Elastic file for Z = 8, A = 18 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/8_17_Oxygen
+NeutronHP: /Elastic file for Z = 6, A = 12 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 13 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 8, A = 18 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/8_17_Oxygen
+NeutronHP: /Elastic file for Z = 6, A = 12 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 13 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 10, A = 20 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/11_22_Sodium
+NeutronHP: /Elastic file for Z = 10, A = 21 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/11_22_Sodium
+NeutronHP: /Elastic file for Z = 10, A = 22 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/11_22_Sodium
+NeutronHP: /Elastic file for Z = 8, A = 18 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/8_17_Oxygen
+NeutronHP: /Elastic file for Z = 6, A = 12 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 13 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 8, A = 18 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Elastic/CrossSection/8_17_Oxygen
+
+Neutron HP Thermal Scattering Data: Following material-element pairs and/or elements are registered.
+Element TS_H_of_Water,  internal thermal scattering id 0
+
+
+Neutron HP Thermal Scattering: Following material-element pairs or elements are registered.
+Element TS_H_of_Water,  internal thermal scattering id 0
+
+
+Neutron HP Thermal Scattering Data: Following material-element pairs and/or elements are registered.
+Element TS_H_of_Water,  internal thermal scattering id 0
+
+NeutronHP: /Capture file for Z = 6, A = 12 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 6, A = 13 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 10, A = 20 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Capture/CrossSection/11_22_Sodium
+NeutronHP: /Capture file for Z = 10, A = 21 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Capture/CrossSection/11_22_Sodium
+NeutronHP: /Capture file for Z = 10, A = 22 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Capture/CrossSection/11_22_Sodium
+NeutronHP: /Capture file for Z = 8, A = 18 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Capture/CrossSection/8_17_Oxygen
+NeutronHP: /Capture file for Z = 6, A = 12 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 6, A = 13 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 8, A = 18 is not found and NeutronHP will use /cvmfs/snoplus.egi.eu/sl6/sw/dependencies/geant4.10.0.p02/share/Geant4-10.0.2/data/G4NDL4.4/Capture/CrossSection/8_17_Oxygen
+GLG4Scint: No reemission spectrum for material, setting equal to primary scintillation spectrum
+GLG4Scint: No reemission spectrum for material, setting equal to primary scintillation spectrum
+GLG4Scint: No reemission spectrum for material, setting equal to primary scintillation spectrum
+PhysicsList::AddAttenuationAndCerenkov Omitting optical Mie scattering
+OpBoundary is created using RAT patched G4OpBoundaryProcess
+Cerenkov::Cerenkov constructor
+NOTE: this is now a G4VProcess!
+Required change in UserPhysicsList: 
+change: pmanager->AddContinuousProcess(theCerenkovProcess);
+to:     pmanager->AddProcess(theCerenkovProcess);
+        pmanager->SetProcessOrdering(theCerenkovProcess,idxPostStep);
+G4Cerenkov: Cerenkov is created
+Warning : Region <hqePMT_ConcentratorOpticalRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <hqePMT_PMTOpticalRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <innerPMT_ConcentratorOpticalRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <innerPMT_PMTOpticalRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <neckPMT_PMTOpticalRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <outerPMT_PMTOpticalRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+[33mProcBlockManager::DoProcCmd: Initializing processor [mcalibratePMT
+[33mProcBlockManager::DoProcCmd: Initializing processor [mtrigTypeSelector
+[33mProcBlockManager::DoProcCmd: Initializing processor [msocdata
+[33mProcBlockManager::DoProcCmd: Initializing processor [mpython
+[33mProcBlockManager::DoProcCmd: Initializing processor [msocpeakfind
+[33mProcBlockManager::DoProcCmd: Initializing processor [msocfitter
+[33mProcBlockManager::DoProcCmd: Initializing processor [moutsoc
+Processing file /gs/home/jpyanez/snoplus/data/laserball/SNOP_0000102529_000.zdab
+InZDABProducer::ReadEvents: Reading from /gs/home/jpyanez/snoplus/data/laserball/SNOP_0000102529_000.zdab
+-- same block --
+InZDAB: RHDR: Run 102529
+Producer::InitialiseRun: Initialising a new run, id: 102529
+DB::Loading PgSQL backend
+DB::SetServer : Tables on server include[37;1m BLINDNESS_CHUNKS[37;1m BLINDNESS_RUN_LEVEL[37;1m CSS_CUTS[37;1m CSS_RESULT[37;1m DAQ_RUN_LEVEL[37;1m DATAQUALITY_RECORDS[37;1m DQCHECKS[37;1m DQLL[37;1m ECA_PDST[37;1m ECA_TSLP[37;1m GREY_DISC_PARAMETERS[37;1m NOISE_RUN_INTEGRATED[37;1m NOISE_RUN_LEVEL[37;1m OPTICS[37;1m PCA_TW[37;1m PMTCALIB[37;1m PMT_DQXX[37;1m PMT_VARIATION[37;1m RUN[37;1m SMELLIE_RUN[37;1m TELLIE_FIRE_PARS[37;1m TELLIE_PATCH_MAPPING[37;1m TELLIE_PCA_FIBRE_OFFSETS[37;1m TELLIE_RUN[m
+[31mDenying default plane access for the following tables: [m
+[31m :: RUN[*][m
+[31m :: PMT_DQXX[*][m
+[31m :: PCA_TW[*][m
+[31m :: PMTCALIB[*][m
+[31m :: DATAQUALITY_RECORDS[*][m
+[31m :: CSS_CUTS[*][m
+[31m :: CSS_RESULT[*][m
+[31m :: OPTICS[lightwater_sno][m
+[31m :: OPTICS[acrylic_sno][m
+[31m :: PMT_VARIATION[][m
+[31m :: CALIB_COMMON_RUN_LEVEL[*][m
+[31m :: ECA_PDST[*][m
+[31m :: ECA_TSLP[*][m
+[31m :: N2DYELASER_RUN_LEVEL[*][m
+[31m :: SMELLIE_RUN[*][m
+[31m :: TELLIE_RUN[*][m
+[31m :: AMELLIE_RUN[*][m
+[31m :: GREY_DISC_PARAMETERS[DiscOptics0_0][m
+DB::FindTableRun : Many bothans died to bring you this table...
+DB::FindTable: Loaded table PMT_DQXX[] from server
+ChanHWStatus::BeginOfRun: Loaded DQXX information for 9728 channels.
+DB::FindTable: Loaded table GREY_DISC_PARAMETERS[DiscOptics0_0] from server
+LightPathCalculator::BeginOfRun: Homogeneous not partial filled scint assumed.
+DB::FindTable: Loaded table OPTICS[acrylic_sno] from server
+DB::FindTable: Loaded table OPTICS[lightwater_sno] from server
+GroupVelocity::LoadGroupVelocity: No explicit group velocities available for entry: OPTICS[labppo_scintillator] - calculating using old method 
+GroupVelocity::LoadGroupVelocity: Explicit group velocities found for entry: OPTICS[acrylic_sno] - these will be used 
+GroupVelocity::LoadGroupVelocity: Explicit group velocities found for entry: OPTICS[lightwater_sno] - these will be used 
+ShadowingCalculator: Loaded AV hold-down rope shadowing information.
+ShadowingCalculator: Loaded AV support rope shadowing information.
+ShadowingCalculator: Loaded belly plate shadowing information.
+ShadowingCalculator: Loaded NCD anchor shadowing information.
+ShadowingCalculator: Loaded AV pipe shadowing information.
+ShadowingCalculator: Loaded neck boss shadowing information.
+DB::FindTable: Loaded table PMTCALIB[] from server
+ChannelEfficiency::BeginOfRun: Average channel efficiency across normal tubes is 0.796351
+ChannelEfficiency::BeginOfRun: Average channel efficiency across normal + OWLs is 0.796482
+DB::FindTable: Loaded table PMT_VARIATION[] from server
+ (ECACal::BeginOfRun) Using pattern_rate 5_10 for PDST 
+ (ECACal::BeginOfRun) Using pattern_rate 5_200 for TSLP 
+DB::FindTable: Loaded table ECA_PDST[5_10] from server
+DB::FindTable: Loaded table ECA_TSLP[5_200] from server
+DB::FindTable: Loaded table PCA_TW[] from server
+SOCDataProc::BeginOfRun Running on data.
+DB::FindTable: Loaded table RUN[] from server
+aRunType = 14
+DB: Field CALIB_COMMON_RUN_LEVEL[MANIP].source_type lookup failure.  Does not exist or has wrong type.

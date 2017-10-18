@@ -1,0 +1,60 @@
+#   File: LaserballSOC_w337_x0_y0_z0_o0.mac
+#
+#   Date: 07/29/2014
+#   Contact: G.Prior (gersende@lip.pt)
+#   Revision: first revision
+#   Date: 31/03/2017
+#   Updated: J. Maneira (maneira@lip.pt)
+#   Revision: trigger settings, DB updates
+
+#   SOC laserball N2 337 nm
+#   9000 gammas/ev (Nhits ~350) for the water phase
+#   x = 0 mm, y = 0 mm, z = 0
+#   orientation = 0
+#   March 2017: syntax updates (DB table is now LASERBALL_SIMULATION)
+#
+
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+# To use simulated external asynch trigger
+/rat/db/set DAQ_RUN_LEVEL trigger_mask 32768
+/rat/db/set DAQ_RUN_LEVEL trigger_enable 35967
+/rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_full_water.geo"
+
+# the following line is just for recording in soc file
+/rat/db/set LASERBALL_SIMULATION intensity 10000
+/rat/db/set LASERBALL_SIMULATION position [0.0, 0.0, 0.0]
+/rat/db/set LASERBALL_SIMULATION orientation 0.0
+/rat/db/set LASERBALL_SIMULATION dye_name "COUMARIN-500"
+/rat/db/set LASERBALL_SIMULATION lb_id "OCT03"
+/rat/db/set LASERBALL_SIMULATION angle_mode "TABLE2D"
+
+/run/initialize
+
+# BEGIN EVENT LOOP
+/rat/proc frontend
+/rat/proc trigger
+/rat/proc eventbuilder
+/rat/proc calibratePMT
+
+/rat/proc count
+/rat/procset update 10
+
+
+/rat/proc/if trigTypeSelector
+/rat/procset trigType "EXTASY"
+    /rat/proc socdata
+/rat/proc/endif
+
+/rat/proc outsoc
+#/rat/procset file "lb_wn_505.root"
+
+# END EVENT LOOP
+
+# Choose the laserball generator from fixed point, uniform in time
+/generator/add combo vertexlaserball:poslaserball:poisson
+
+#/generator/rate/set 100
+/rat/run/start 4000
+exit

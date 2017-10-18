@@ -1,0 +1,30 @@
+## 
+## Macro to calibrate data and dump it to a ROOT file
+##
+
+/rat/db/set DAQ dqxx_info 1
+
+/rat/inzdab/load /home/jpyanez/snoplus/data/laserball_runs/zdab/SNOP_0000100556_000.zdab 
+
+
+/rat/db/set RUN runtype 14
+
+
+/rat/db/load /home/jpyanez/snoplus/data/laserball_db_files/CAL_SOURCE_RUN_LEVEL.ratdb
+
+/run/initialize
+/rat/proc calibratePMT
+
+# Only selecting EXTASY triggers
+/rat/proc/if trigTypeSelector
+  /rat/procset trigType "EXTASY"
+/rat/proc/endif
+
+/rat/proc outroot
+
+/rat/procset file "/home/jpyanez/snoplus/data/laserball_runs/root/SNOP_0000100556.root"
+
+
+/rat/inzdab/read
+
+exit
