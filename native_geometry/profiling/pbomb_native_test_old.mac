@@ -1,0 +1,29 @@
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+# Use the simple geo for speed up viewing
+/rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_original.geo"
+
+
+
+
+
+/run/initialize
+
+# BEGIN EVENT LOOP
+/rat/proc simpledaq
+/rat/proc count
+/rat/procset update 1
+/rat/proc calibratePMT
+/rat/proclast outroot
+# END EVENT LOOP.
+
+/generator/add combo pbomb:point:uniform
+
+/generator/vtx/set 5000 380 0
+
+/generator/pos/set -130 800 5910 mm
+/generator/rate/set 1
+
+/rat/run/start 1000 
+exit
