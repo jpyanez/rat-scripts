@@ -1,0 +1,35 @@
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+# Using the native geometry
+/rat/db/set DETECTOR geo_file "geo/snoplusnative_water.geo"
+
+/rat/db/set NATIVE_GEO_DIMENSIONS[natgeo_dimensions] inner_av_radius 6001.
+
+
+# Removing elements that are NOT native
+/rat/db/set GEO[outerPMT] enable 0
+/rat/db/set GEO[innerPMT] enable 0
+/rat/db/set GEO[av_pipes] enable 0
+/rat/db/set GEO[snorope] enable 0
+
+/run/initialize
+
+# BEGIN EVENT LOOP
+/rat/proc simpledaq
+/rat/proc count
+/rat/procset update 1
+/rat/proc calibratePMT
+#/rat/proclast outroot
+# END EVENT LOOP.
+
+
+/generator/add combo gun:point:uniform
+# Momentum - 380nm
+/generator/vtx/set opticalphoton 0. 0. 0. 3.26193587482519e-06
+# Position - In the AV part of belly plate, towards the bottom of it, outside the groove but inside the loop region
+/generator/pos/set  6030. 10. -200.
+/generator/rate/set 1
+
+/rat/run/start 1000000
+exit

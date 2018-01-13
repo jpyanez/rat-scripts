@@ -1,0 +1,37 @@
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+# Using the native geometry
+/rat/db/set DETECTOR geo_file "geo/snoplusnative_water.geo"
+
+/rat/db/set NATIVE_GEO_DIMENSIONS[natgeo_dimensions] inner_av_radius 6001.
+
+
+# Removing elements that are NOT native
+/rat/db/set GEO[outerPMT] enable 0
+/rat/db/set GEO[innerPMT] enable 0
+
+/rat/tracking/store full
+
+/run/initialize
+
+
+
+# BEGIN EVENT LOOP
+/rat/proc simpledaq
+/rat/proc count
+/rat/procset update 1
+/rat/proc calibratePMT
+#/rat/proclast outroot
+# END EVENT LOOP.
+
+
+/generator/add combo gun:point:uniform
+# Momentum
+/generator/vtx/set opticalphoton 5.9300677636278963e-08 -4.1733491214436398e-08 3.26193587482519e-06
+# Position
+/generator/pos/set  6011.1046396763677  -491.22088846024053 296.31586440447336
+/generator/rate/set 1
+
+/rat/run/start 1000000
+exit
