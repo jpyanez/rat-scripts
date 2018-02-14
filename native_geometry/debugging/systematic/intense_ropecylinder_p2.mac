@@ -11,7 +11,7 @@
 /rat/db/set GEO[outerPMT] enable 0
 /rat/db/set GEO[innerPMT] enable 0
 /rat/db/set GEO[av_pipes] enable 0
-/rat/db/set GEO[snorope] enable 0
+
 
 /run/initialize
 
@@ -27,8 +27,8 @@
 /generator/add combo gun:point:uniform
 # Momentum - 380nm
 /generator/vtx/set opticalphoton 0. 0. 0. 3.26193587482519e-06
-# Position - In the AV part of belly plate, towards the bottom of it, outside the groove
-/generator/pos/set  6030. 554. -200.
+# Position - In the region of the rope cylinders, outside the AV
+/generator/pos/set  6090. 0. 0.
 /generator/rate/set 1
 
 /rat/run/start 10000

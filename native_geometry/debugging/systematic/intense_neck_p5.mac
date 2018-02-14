@@ -10,13 +10,14 @@
 # Removing elements that are NOT native
 /rat/db/set GEO[outerPMT] enable 0
 /rat/db/set GEO[innerPMT] enable 0
+/rat/db/set GEO[av_pipes] enable 0
 
 /run/initialize
 
 # BEGIN EVENT LOOP
 /rat/proc simpledaq
 /rat/proc count
-/rat/procset update 1000
+/rat/procset update 1
 /rat/proc calibratePMT
 #/rat/proclast outroot
 # END EVENT LOOP.
@@ -29,5 +30,5 @@
 /generator/pos/set  12 -30 10000.
 /generator/rate/set 1
 
-/rat/run/start 1000000
+/rat/run/start 10000
 exit

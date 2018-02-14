@@ -10,13 +10,14 @@
 # Removing elements that are NOT native
 /rat/db/set GEO[outerPMT] enable 0
 /rat/db/set GEO[innerPMT] enable 0
+/rat/db/set GEO[av_pipes] enable 0
 
 /run/initialize
 
 # BEGIN EVENT LOOP
 /rat/proc simpledaq
 /rat/proc count
-/rat/procset update 1000
+/rat/procset update 1
 /rat/proc calibratePMT
 #/rat/proclast outroot
 # END EVENT LOOP.
@@ -26,8 +27,8 @@
 # Momentum - 380nm
 /generator/vtx/set opticalphoton 0. 0. 0. 3.26193587482519e-06
 # Position - In the SV, close to the neck region
-/generator/pos/set  -10 -30 5700.
+/generator/pos/set  500 -450 5960.
 /generator/rate/set 1
 
-/rat/run/start 1000000
+/rat/run/start 10000
 exit

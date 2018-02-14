@@ -31,5 +31,5 @@
 /generator/pos/set  6020.  100. 720.
 /generator/rate/set 1
 
-/rat/run/start 1000000
+/rat/run/start 10000
 exit
