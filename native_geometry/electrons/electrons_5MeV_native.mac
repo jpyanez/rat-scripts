@@ -1,0 +1,28 @@
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+# Use the simple geo for speed up viewing
+#/rat/db/set DETECTOR geo_file "geo/snoplus_water.geo"
+/rat/db/set DETECTOR geo_file "geo/snoplusnative_water.geo"
+
+# Set the matching radius for the native geometry (regardless of whether it is used)
+/rat/db/set NATIVE_GEO_DIMENSIONS[natgeo_dimensions] inner_av_radius 6005.
+
+
+# BEGIN EVENT LOOP
+/run/initialize
+/rat/proc simpledaq
+/rat/proc count
+/rat/procset update 10
+/rat/proc calibratePMT
+/rat/proclast outroot
+/rat/procset file "/home/jpyanez/snoplus/rundir/geometry_comparisons/electrons/native_center_5MeV.root"
+# END EVENT LOOP
+
+/generator/add combo gun:fill:poisson
+/generator/vtx/set e- 0 0 0 5
+/generator/pos/set 0 0 0
+/generator/rate/set 1
+
+/rat/run/start 1000
+exit
