@@ -1,0 +1,29 @@
+# Omit irrelavent processes to speed up the simulation
+/rat/physics_list/OmitMuonicProcesses true
+/rat/physics_list/OmitHadronicProcesses true
+
+##  The detector geometry
+/rat/db/set DETECTOR geo_file "sphere_world.geo"
+
+
+/rat/tracking/store full
+
+# Begin Event loop and the processors to be run on each event
+# Only simulate particles, no detector
+
+/run/initialize
+
+# Save file as RATDS - full info
+/rat/proc outroot
+
+# Now specify the events to generate and pass to the event loop
+/generator/add combo gun:fill:uniform
+/generator/vtx/set e- 0 0 1. 5.
+/generator/pos/set dark_sphere
+/generator/rate/set 1
+
+# start the simulation with 100 events
+/rat/run/start 100
+
+
+exit
