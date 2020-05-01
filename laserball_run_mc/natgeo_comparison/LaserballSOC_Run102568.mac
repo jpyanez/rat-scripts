@@ -15,7 +15,8 @@
 /rat/physics_list/OmitMuonicProcesses true
 /rat/physics_list/OmitHadronicProcesses true
 
-/rat/db/load /home/jpyanez/snoplus/data/laserball_db_files/CAL_SOURCE_RUN_LEVEL.ratdb
+# Tables for the particular RUN
+/rat/db/load /home/jpyanez/snoplus/data/snoplus_dbfiles/tables_102568-102568.ratdb
 
 # To use simulated external asynch trigger
 /rat/db/set DAQ_RUN_LEVEL trigger_mask 32768
@@ -24,54 +25,27 @@
 ###
 # Select the geometry
 ###
-# /rat/db/set DETECTOR geo_file "local_geometries/lsnoplusnative_full_water.geo"
 /rat/db/set DETECTOR geo_file "geo/snoplus_water.geo"
+#/rat/db/set DETECTOR geo_file "geo/snoplusnative_water.geo"
 
+# Set the matching radius for the native geometry (regardless of whether it is used)
+/rat/db/set NATIVE_GEO_DIMENSIONS[natgeo_dimensions] inner_av_radius 6005.
 
 ###
 # Description of the laserball simulation
 ###
 
-### Look here for the settings /home/jpyanez/snoplus/software/rat/mac/production/water/calibration/laserball
-### N2=337nm (no dye)
-### PBD=369nm
-### BBQ=385nm
-### BIS-MSB=420nm
-### CUOMARIN-500=505nm
 
 
 ### Global settings
-/rat/db/set LASERBALL_SIMULATION position [10., -224., -3.6]
+/rat/db/set LASERBALL_SIMULATION position [0., -254., -3000.]
 /rat/db/set LASERBALL_SIMULATION orientation 0.0
 /rat/db/set LASERBALL_SIMULATION angle_mode "TABLE2D"
 
 
-##### 420 nm
-/rat/db/set LASERBALL_SIMULATION intensity 6000
-/rat/db/set LASERBALL_SIMULATION dye_name "BIS-MSB"
-/rat/db/set LASERBALL_SIMULATION lb_id "OCT03"
-
-
-###### 395
-/rat/db/set LASERBALL_SIMULATION intensity 10000
-/rat/db/set LASERBALL_SIMULATION dye_name "COUMARIN-500"
-/rat/db/set LASERBALL_SIMULATION lb_id "OCT03"
-
-
-###### 369
-/rat/db/set LASERBALL_SIMULATION dye_name "PBD"
-/rat/db/set LASERBALL_SIMULATION lb_id "AUG06"
-/rat/db/set LASERBALL_SIMULATION angle_mode "SINCOEF"
-
-
 ###### 337 
-/rat/db/set LASERBALL_SIMULATION intensity 9000
-/rat/db/set LASERBALL_SIMULATION dye_name "N2"
-/rat/db/set LASERBALL_SIMULATION lb_id "OCT03"
-
-###### 505
-/rat/db/set LASERBALL_SIMULATION intensity 10000
-/rat/db/set LASERBALL_SIMULATION dye_name "COUMARIN-500"
+/rat/db/set LASERBALL_SIMULATION intensity 9500 # Original was 9000
+/rat/db/set LASERBALL_SIMULATION dye_name "BIS-MSB"
 /rat/db/set LASERBALL_SIMULATION lb_id "OCT03"
 
 
@@ -105,13 +79,14 @@
 /rat/proc count
 /rat/procset update 10
 
-
 /rat/proc/if trigTypeSelector
 /rat/procset trigType "EXTASY"
     /rat/proc socdata
+    /rat/proc outsoc
 /rat/proc/endif
 
-/rat/proc outsoc
+
+#/rat/proc outsoc
 
 # END EVENT LOOP
 

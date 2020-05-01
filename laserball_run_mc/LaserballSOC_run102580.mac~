@@ -58,12 +58,6 @@
 /rat/db/set LASERBALL_SIMULATION lb_id "OCT03"
 
 
-###### 369
-/rat/db/set LASERBALL_SIMULATION dye_name "PBD"
-/rat/db/set LASERBALL_SIMULATION lb_id "AUG06"
-/rat/db/set LASERBALL_SIMULATION angle_mode "SINCOEF"
-
-
 ###### 337 
 /rat/db/set LASERBALL_SIMULATION intensity 9000
 /rat/db/set LASERBALL_SIMULATION dye_name "N2"
