@@ -3,7 +3,7 @@
 /rat/physics_list/OmitHadronicProcesses true
 
 ##  The detector geometry
-/rat/db/set DETECTOR geo_file "sphere_world.geo"
+/rat/db/set DETECTOR geo_file "geo/sphere_world.geo"
 
 
 /rat/tracking/store full
@@ -17,13 +17,13 @@
 /rat/proc outroot
 
 # Now specify the events to generate and pass to the event loop
-/generator/add combo gun:fill:uniform
+/generator/add combo gun:point:uniform
 /generator/vtx/set e- 0 0 1. 5.
 /generator/pos/set dark_sphere
 /generator/rate/set 1
 
 # start the simulation with 100 events
-/rat/run/start 100
+/rat/run/start 1000
 
 
 exit
