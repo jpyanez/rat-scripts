@@ -2,7 +2,7 @@
 /rat/physics_list/OmitHadronicProcesses true
 
 # Use the simple geo for speed up viewing
-#/rat/db/set DETECTOR geo_file "geo/snoplusnative.geo"
+/rat/db/set DETECTOR geo_file "geo/snoplusnative_water.geo"
 # /rat/db/set DETECTOR geo_file "geo/snoplus.geo"
 # /rat/db/set DETECTOR geo_file "geo/snoplus_jpmod.geo"
 # /rat/db/set DETECTOR geo_file "geo/snoplusnative_jpmod2.geo"
@@ -15,7 +15,7 @@
 # there are so many scintillator photons its very slow to view so use water instead
 # /rat/db/set GEO[inner_av] material "lightwater_sno"
 
-/rat/tracking/store full
+# /rat/tracking/store full
 
 /run/initialize
 
